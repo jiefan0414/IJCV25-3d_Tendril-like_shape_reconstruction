@@ -5,17 +5,17 @@ The pipeline reconstructs a dynamic tendril model using three synchronized camer
 
 ---
 
-## 📦 Dataset Download
+## 📥 Dataset Download
 
 Due to large file size, the dataset is hosted externally.
 
-👉 **[Download Dataset from Google Drive](https://drive.google.com/drive/folders/19pg8yRdUplNgLFJYqhHsDnQVIhWlvjwM?usp=sharing)**
+🔗 **[Download Dataset from Google Drive](https://drive.google.com/drive/folders/19pg8yRdUplNgLFJYqhHsDnQVIhWlvjwM?usp=sharing)**
 
 After downloading, place the entire dataset folder under: *Data/Stimulated_3rd_seg/*
 
 
-## 📁 Project Structure
-
+## 🗂️ Project Structure
+```
 IJCV25-3d_Tendril-like_shape_reconstruction/
 │
 ├── Data/
@@ -30,15 +30,63 @@ IJCV25-3d_Tendril-like_shape_reconstruction/
 │ ├── CamExtrPara_Corners_view2.csv
 │ └── CamExtrPara_Corners_view3.csv
 │
-└── Code/
 ├── Step1_Reconstruction.m
 ├── Step2_ClothoidFit.m
-├── 
-├──
-├──
-├──
-└──
-
+│
+└── FrechetDis/
+│ ├── clean_duplicate.m
+│ ├── DiscreteFrechetDist.m
+│ ├── interparc.m
+│
+└── Homography/
+│ ├── epipole.m
+│ ├── homography.m
+│ ├── parallax.m
+│ ├── pcond.m
+│
+└── Ordering/
+│ ├── arrow.m
+│ ├── chooseDirct_2seg.m
+│ ├── chooseDirct_3seg.m
+│ ├── collect_neighbor_changingH_weight.m
+│ ├── find_next_PN_index.m
+│ ├── orderingskel_1cross2seg.m
+│ ├── orderingskel_1cross3seg.m
+│ ├── orderingskel_without_Cr.m
+│
+└── PWC/
+│ ├── AutoSeg_BestPCDfitting.m
+│ ├── CompareFitting.m
+│ ├── downsampling.m
+│ ├── error_fit.m
+│ ├── FrenetFitting.m
+│ ├── getFittedCurvatureTorsion.m
+│ ├── HeightLineFit.m
+│ ├── powersmooth2.m
+│ ├── prepare_ksegments_var.m
+│ ├── recurseThroughWalkMatrix.m
+│ ├── rigid_transform_3D.m
+│ ├── TNB.m
+│
+└── Segment/
+│ ├── segmentVideoFrame.m
+│
+└── ShowTogether/
+│ ├── myNormalize.m
+│ ├── natsort.m
+│ ├── natsortfiles.m
+│
+└── Thinning/
+│ ├── cleanedgelist.m
+│ ├── edgecolor.m
+│ ├── edgelink.m
+│ ├── findendsjunctions.m
+│ ├── Skeletonization.m
+│ ├── thinningVideoFrame.m
+│
+└──LICENSE
+└──README.md
+```
 
 ---
 
